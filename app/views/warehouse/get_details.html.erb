@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<%= form_for :item do |f| %>
+<%= text_field(:item, :id) %>
+<%= text_field(:item, :name) %>
+<%= text_field(:item, :producent) %>
+<%= text_field(:item, :datasheet) %>
+<% end %>
+<%= link_to 'Delete', delete_item_path(@item)%>
+</br>
