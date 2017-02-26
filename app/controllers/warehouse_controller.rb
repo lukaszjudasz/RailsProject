@@ -11,10 +11,12 @@ class WarehouseController < ApplicationController
 
   def add_item # view
     @item = Item.new
+    @categories = Category.all
   end
 
   def get_details #view
     @item = Item.find(params[:id])
+    @categories = Category.all
   end
 
   def modify_item # action
@@ -37,6 +39,6 @@ class WarehouseController < ApplicationController
 private
 def item_params
   params.require(:item)
-        .permit(:name, :producent, :datasheet)
+        .permit(:name, :producent, :datasheet, :category_id)
   end
 end

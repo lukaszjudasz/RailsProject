@@ -1,4 +1,4 @@
 <p id="notice"><%= notice %></p>
-<%= render 'file_form', item: @item, action_url: modify_item_path %>
+<%= render 'file_form', item: @item, categories: @categories, action_url: modify_item_path %>
 
 <%= link_to 'Delete', delete_item_path(@item)%>
