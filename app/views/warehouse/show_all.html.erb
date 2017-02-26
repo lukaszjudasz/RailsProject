@@ -5,7 +5,7 @@
 <%= item.name %>
 <%= item.producent %>
 <%= item.datasheet %>
-<%= link_to 'Show details', item_details_path(item)%>
+<%= link_to 'Show details', get_item_path(item)%>
 <%= link_to 'Delete', delete_item_path(item)%>
 </br>
 <% end %>
