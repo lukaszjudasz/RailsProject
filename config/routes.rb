@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+
   get 'warehouse/index'
 
   get 'welcome/index'
@@ -10,7 +12,8 @@ Rails.application.routes.draw do
   get 'warehouse/delete_item/:id', to: 'warehouse#delete_item', as: 'delete_item'
   patch 'warehouse/modify_item/:id', to: 'warehouse#modify_item', as: 'modify_item'
 
+  resources :categories
 
-  root 'warehouse#index'
+  root 'categories#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
