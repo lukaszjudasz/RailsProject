@@ -16,6 +16,7 @@ gem 'puma', '~> 3.0'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'bootstrap-table-rails', '~> 1.8', '>= 1.8.1'
 
 # Use SCSS for stylesheets, commented out because of bootstrap-sass and autoprefixer-rails
 # gem 'sass-rails', '~> 5.0'

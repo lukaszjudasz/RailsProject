@@ -1,11 +1,19 @@
-<% @categories.each do |category| %>
-<%= category.name %>
-<% if category.items.count > 0 %>
-(<%= category.items.count %>)
-<% end %>
-
-<br />
-<% end %>
-
-
-<%= link_to 'add new', new_category_path %>
+<div class="container">
+  <%= link_to 'Add new category', new_category_path, :class=>"btn btn-primary" %>
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @categories.each do |category| %>
+      <td><%= category.name %></td>
+      <td><%= category.items.count %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
