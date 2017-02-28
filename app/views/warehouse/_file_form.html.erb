@@ -1,15 +1,29 @@
-<%= form_for item, url: action_url do |f| %>
+<%= form_for item, url: action_url, :html => {:class => 'form-inline'} do |f| %>
+<div class="form-group">
+
   <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :producent %>
-  <%= f.text_field :producent %>
-  <%= f.label :datasheet, 'Datasheet (URL)' %>
-  <%= f.text_field :datasheet %>
-  <%= f.collection_select :category_id, categories, :id, :name, include_blank: true %>
-  <%= f.submit %>
-  <% if item.errors.any? %>
-  <div class="alert alert-danger">
-  Incorrect input.
+  <%= f.text_field :name, :class => 'form-control' %>
   </div>
+  <div class="form-group">
+
+  <%= f.label :producent %>
+  <%= f.text_field :producent, :class => 'form-control' %>
+</div>
+<div class="form-group">
+
+  <%= f.label :datasheet, 'Datasheet (URL)' %>
+  <%= f.text_field :datasheet, :class => 'form-control' %>
+</div>
+<div class="form-group">
+
+  <%= f.collection_select :category_id, categories, :id, :name, {}, {:class => 'form-control'} %>
+</div>
+  <%= f.submit :class => 'btn btn-success' %>
+  <% if item.errors.any? %>
+    <div class="alert alert-danger">
+      Incorrect input.
+    </div>
   <% end %>
+
+
 <% end %>
