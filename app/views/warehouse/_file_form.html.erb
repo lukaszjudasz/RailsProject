@@ -14,7 +14,7 @@
   <div class="form-group">
     <%= f.collection_select :category_id, categories, :id, :name, {}, {:class => 'form-control'} %>
   </div>
-  <%= f.submit :class => 'btn btn-success' %>
+  <%= f.submit :class => 'btn btn-primary' %>
   <% if item.errors.any? %>
     <div class="alert alert-danger">
       Incorrect input.
