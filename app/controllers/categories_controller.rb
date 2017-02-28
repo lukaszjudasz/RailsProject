@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
+    @categories = @categories.sort_by{|category| category.items.count}.reverse_each
   end
 
   def new
