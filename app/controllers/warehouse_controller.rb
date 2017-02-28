@@ -18,7 +18,7 @@ class WarehouseController < ApplicationController
     if @item.save
       redirect_to show_all_items_path
     else
-      render :new
+      render :add_item
     end
 
   end
