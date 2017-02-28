@@ -18,7 +18,11 @@
       <td><%= item.id %></td>
       <td><%= item.name %></td>
       <td><%= item.producent %></td>
+      <% if URI::regexp.match(item.datasheet) %>
+      <td><a href="<%= item.datasheet%>">Link</a></td>
+      <% else %>
       <td><%= item.datasheet %></td>
+      <% end %>
 
       <td><%= item.category.name unless item.category.nil? %></td>
       <td><%= link_to 'Show details', get_item_path(item), :class=>"btn btn-info"%></td>
