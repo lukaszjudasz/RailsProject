@@ -2,13 +2,6 @@ class WarehouseController < ApplicationController
   def index
   end
 
-  def save_item # action
-    @item = Item.new(item_params)
-    @item.save
-
-    redirect_to show_all_items_path
-  end
-
   def add_item # view
     @item = Item.new
     @categories = Category.all
@@ -19,10 +12,25 @@ class WarehouseController < ApplicationController
     @categories = Category.all
   end
 
+  def save_item # action
+    @item = Item.new(item_params)
+    @categories = Category.all
+    if @item.save
+      redirect_to show_all_items_path
+    else
+      render :new
+    end
+
+  end
+
   def modify_item # action
     @item = Item.find(params[:id])
-    @item.update(item_params)
-    redirect_to show_all_items_path
+    @categories = Category.all
+    if @item.update(item_params)
+      redirect_to show_all_items_path
+    else
+      render :get_details
+    end
   end
 
   def delete_item # action

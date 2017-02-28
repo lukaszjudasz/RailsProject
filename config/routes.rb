@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'warehouse/show_all', as: 'show_all_items'
   get 'warehouse/item_details/:id', to: 'warehouse#get_details', as: 'get_item'
   get 'warehouse/delete_item/:id', to: 'warehouse#delete_item', as: 'delete_item'
-  patch 'warehouse/modify_item/:id', to: 'warehouse#modify_item', as: 'modify_item'
+  patch 'warehouse/item_details/:id', to: 'warehouse#modify_item', as: 'modify_item'
 
   resources :categories
 

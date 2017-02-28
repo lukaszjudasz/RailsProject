@@ -1,10 +1,15 @@
 <%= form_for item, url: action_url do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :producent %>
-<%= f.text_field :producent %>
-<%= f.label :datasheet %>
-<%= f.text_field :datasheet %>
-<%= f.collection_select :category_id, categories, :id, :name, include_blank: true %>
-<%= f.submit %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :producent %>
+  <%= f.text_field :producent %>
+  <%= f.label :datasheet %>
+  <%= f.text_field :datasheet %>
+  <%= f.collection_select :category_id, categories, :id, :name, include_blank: true %>
+  <%= f.submit %>
+  <% if item.errors.any? %>
+  <div class="alert alert-danger">
+  Incorrect input.
+  </div>
+  <% end %>
 <% end %>
