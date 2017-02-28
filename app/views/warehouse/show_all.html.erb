@@ -19,7 +19,7 @@
       <td><%= item.name %></td>
       <td><%= item.producent %></td>
       <% if URI::regexp.match(item.datasheet) %>
-      <td><a href="<%= item.datasheet%>">Link</a></td>
+      <td><a href="<%= item.datasheet%>" target="_blank">Link</a></td>
       <% else %>
       <td><%= item.datasheet %></td>
       <% end %>
