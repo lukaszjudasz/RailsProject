@@ -19,4 +19,4 @@ Item.create(name: 'NodeMCU v3', datasheet: 'https://github.com/nodemcu/nodemcu-f
 Item.create(name: 'Arduino Leonardo', datasheet: 'https://www.arduino.cc/en/Main/ArduinoBoardLeonardo', producent: 'Arduino', category: module_item)
 
 Item.create(name: 'Screwdriver set', category: module_item)
-Item.create(name: 'YIHUA 937D', datasheet: 'http://www.jinlantrade.com/ebay/937D+FXT000000001/img.pdf', producent: 'Arduino', category: module_item)
+Item.create(name: 'YIHUA 937D', datasheet: 'http://www.jinlantrade.com/ebay/937D+FXT000000001/img.pdf', producent: 'Arduino', category: tool)
